@@ -1,0 +1,59 @@
+@charset "UTF-8";
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #eee;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	font-size: 360%;
+}
+form {
+	position: absolute;
+	z-index: 2;
+	top: 150px;
+	left: 50%;
+	margin-left: -125px;
+	padding: 20px 20px 10px 20px;
+	width: 250px;
+	background: -webkit-gradient(linear, 0% 100%, 0% 0%, color-stop(0%, #ddd), color-stop(100%, #fff));
+	background: -webkit-linear-gradient(90deg, #ddd 0%, #fff 100%);
+	background: -moz-linear-gradient(90deg, #ddd 0%, #fff 100%);
+	border-radius: 5px;
+	-webkit-box-shadow: 0 5px 8px #666;
+	-moz-box-shadow: 0 5px 8px #666;
+	border: 3px solid #fff;
+}
+[type=text], [type=password] {
+	margin-bottom: 5px;
+	width: 200px;
+}
+[type=submit] {
+	width: 100px;
+}
+[name=verify]{
+	display: none;
+}
+div {
+	position: absolute;
+	z-index: 1;
+	width: 600px;
+	top: -46px;
+	left: 50%;
+	margin-left: -300px;
+	text-align:center;
+	-webkit-transition: all 0.35s ease-out;
+	-moz-transition: all 0.35s ease-out;
+	text-shadow: 0 0 0 rgba(0,0,0,0.9);
+}
+form:hover div {
+	top: -150px;
+	text-shadow: 0 50px 40px rgba(0,0,0,0.3);
+	font-size: 200%;
+}

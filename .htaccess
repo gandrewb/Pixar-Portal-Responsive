@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RewriteRule   ^blog/(.+)$  	  blog.php?id=$1   		[NC,L]   #Rewrite for blog articles
+RewriteRule   ^movies/(.+)$   movies.php?movie=$1   [NC,L]   #Rewrite for movie pages

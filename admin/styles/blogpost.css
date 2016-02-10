@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'Aller';
+    src: url('../../fonts/aller_lt-webfont.eot');
+    src: url('../../fonts/aller_lt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/aller_lt-webfont.woff') format('woff'),
+         url('../../fonts/aller_lt-webfont.ttf') format('truetype'),
+         url('../../fonts/aller_lt-webfont.svg#AllerLightRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aller';
+    src: url('../../fonts/aller_ltit-webfont.eot');
+    src: url('../../fonts/aller_ltit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/aller_ltit-webfont.woff') format('woff'),
+         url('../../fonts/aller_ltit-webfont.ttf') format('truetype'),
+         url('../../fonts/aller_ltit-webfont.svg#AllerLightItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Aller';
+    src: url('../../fonts/aller_rg-webfont.eot');
+    src: url('../../fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/aller_rg-webfont.woff') format('woff'),
+         url('../../fonts/aller_rg-webfont.ttf') format('truetype'),
+         url('../../fonts/aller_rg-webfont.svg#AllerRegular') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body{
+	font-family: 'Aller';
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-size: 62.5%;
+	background-color: #eee;
+	margin: 0;
+	padding: 0;
+}
+
+form div a{
+	font-size: 2em;
+	cursor: pointer;
+	margin: 0 10px 0 0;
+	display: block;
+	float: left;
+	width: 25px;
+	height: 25px;
+	border: solid 1px #aaa;
+	background: -webkit-gradient(linear, 0% 100%, 0% 0%, color-stop(0%, #ddd), color-stop(100%, #fff));
+	background: -webkit-linear-gradient(90deg, #ddd 0%, #fff 100%);
+	background: -moz-linear-gradient(90deg, #ddd 0%, #fff 100%);
+	text-align: center;
+	line-height: 30px;
+	border-radius: 3px;
+	text-shadow: 1px 1px 0 #fff;
+	font-family: "Myriad", "Myriad Pro";
+}
+a em{
+	margin-left: -3px;
+}
+a:hover{
+	color: #c30;
+}
+a:nth-of-type(-n+3){
+	line-height: 28px;
+}
+a:nth-of-type(10), a:nth-of-type(11){
+	font-size: 135%;
+}
+a:nth-of-type(10){
+	line-height: 32px;
+}
+
+form{
+	width: 940px;
+	position: relative;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #fff;
+}
+form header{
+	
+}
+#middle{
+	overflow: auto;
+	clear: both;
+	padding: 10px 0;
+}
+form footer{
+	clear: both;
+}
+[type=text], textarea{
+	border: solid 1px #aaa;
+}
+[type=text]{
+	margin: 10px 0;
+}
+select{
+	float: right;
+}
+input:focus, textarea:focus{
+	border: solid 1px #77f;
+	outline: none;
+}
+select:focus{
+	outline:none;
+}
+[type=text], [type=submit], [type=button], select{
+	padding: 5px;
+	font-size: 1.8em;
+}
+[type=submit], [type=button]{
+	width: 75px;
+	margin-left: 10px;
+}
+[name=title]{
+	width: 928px;
+	margin: 0 0 10px 0;
+}
+textarea{
+	float: left;
+	width: 580px;
+	height: 560px;
+	font-family: 'Aller';
+	font-size: 1.6em;
+	clear: both;
+	padding: 15px 20px;
+	resize: none;
+}
+[name=timestamp]{
+	margin: 0;
+}
+form>a{
+	font-size: 1.3em;
+	color: #000;
+	text-decoration: none;
+}
+.colorbox{
+	display: inline-block;
+	width: 31px;
+	height: 31px;
+	margin: 0 0 0 10px;
+	vertical-align: bottom;
+	cursor: pointer;
+}
+#white{
+	border: solid 1px #aaa;
+	background-color: #fff;
+}
+#black{
+	border: solid 1px #000;
+	background-color: #000;
+}
+#white.selected, #black.selected{
+	border: solid 2px #c30;
+	width: 29px;
+	height: 29px;
+}
+.toggle{
+	display: inline-block;
+	width: 52px;
+	height: 21px;
+	overflow: hidden;
+	background: url('../../imgs/toggle.svg') no-repeat;
+	background-position: -37px 0;
+	border-radius: 4px;
+	margin: 0 0 -6px 10px;
+	position: relative;
+	-webkit-transition: all .1s linear;
+	cursor: pointer;
+}
+input[value=off] + .toggle{
+	background-position: 0 0;
+}
+
+#rcol{
+	float: right;
+	width: 300px;
+	height: 590px;
+	border: solid 1px #aaa;
+	font-size: 150%;
+	margin: 0;
+	overflow-y: scroll;
+}
+#rcol>div{
+	padding: 5px 10px;
+	border-bottom: solid 1px #eee;
+	overflow: auto;
+}
+#rcol>div:nth-of-type(even){
+	background-color: #eee;
+}
+#rcol>div strong{
+	text-overflow: ellipsis;
+	margin: 0 25px 0 0;
+}
+#rcol>div p{
+	margin: 0 25px 0 0;
+	font-size: 90%;
+}
+.delete{
+	float: right;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius:    5px;
+	border-radius:         5px;
+	border: solid 1px #fff;
+	background: -webkit-linear-gradient(-90deg, #ddd 5%, #eee 95%);
+	background:    -moz-linear-gradient(-90deg, #ddd 5%, #eee 95%);
+	-webkit-box-shadow: 0 0 1px #222;
+	-moz-box-shadow: 0 0 1px #222;
+	text-shadow: 1px 1px 0 #fff;
+	cursor: pointer;
+	font-weight: bold;
+}
+.delete:hover{
+	background: -webkit-linear-gradient(-90deg, #ccc 5%, #eee 95%);
+	background:    -moz-linear-gradient(-90deg, #ccc 5%, #eee 95%);
+}
+.delete:hover{
+	color: #933;
+}

@@ -58,11 +58,14 @@ function movieLinks($article){
 	return $article;
 }
 
-function printArticle($post){
+function printArticle($post, $link){
 	$articletext = stripslashes($post['article']);
+	$title = ($link) 
+		? '<a href="/blog/'. $post['url'] .'">'. stripslashes($post['title']) .'</a>' 
+		: stripslashes($post['title']);
 		
 	echo '<article class="blog_article">
-			<h2><a href="blog/'. $post['url'] .'">'. stripslashes($post['title']) .'</a></h2>
+			<h2>'.$title.'</h2>
 			<time dateTime="'. date("Y-m-d", $post['timestamp']) .'">'. date("j F Y", $post['timestamp']) .'</time>
 			<section class="article_body">'. movieLinks($articletext) .'</section>
 		</article>';
@@ -80,7 +83,7 @@ function printBlog($id = null){
 	$posts = $db->dq($query);
 
 	foreach($posts as $post){
-		printArticle($post);
+		printArticle($post, true);
 	}
 }
 

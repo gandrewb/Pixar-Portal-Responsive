@@ -71,7 +71,7 @@ h4{
 	font-size: 1em;
 }
 p{
-	margin-bottom: .5em;
+	margin-bottom: 1.25em;
 }
 article{
 	padding: 1.4em;
@@ -148,6 +148,7 @@ header{
 	left: 0;
 	bottom: 0;
 	background-color: #fff;
+	color: #444;
 	-webkit-transition: all .4s ease-out;
 	-moz-transition:    all .4s ease-out;
 	-ms-transition:     all .4s ease-out;
@@ -171,8 +172,10 @@ header{
 		margin-bottom: .2em;
 	}
 	.blog_article h3,
-	.blog_article h4{
-		margin: 1.25em 0 .25em;
+	.blog_article h4,
+	.blog_article h5,
+	.blog_article h6{
+		margin: .75em 0 .25em;
 		clear: both;
 		display: inline-block;
 	}
@@ -183,11 +186,11 @@ header{
 	.blog_article .article_body{
 		margin-top: 1em;
 		overflow: auto;
-		line-height: 1.4;
+		line-height: 1.6;
 	}
 	.blog_article img{
 		max-width: 100%;
-		margin: .5em 1em .5em 0;
+		margin: 0 1em 1em 0;
 	}
 	.blog_article img.left{
 		float: left;

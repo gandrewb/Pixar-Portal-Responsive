@@ -21,7 +21,7 @@
 	<div id="frame" class="frame">
 		<section class="content">
 			<?php 
-				printArticle($post);
+				printArticle($post, false);
 			?>
 		</section>
 	

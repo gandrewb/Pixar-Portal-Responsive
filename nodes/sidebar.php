@@ -7,9 +7,19 @@
 			
 			<div class="movie_menu">
 				<div id="poster_container" class="poster_container">
-				<?php 
+				<?php
+					
+					$upcoming = false;
+					
 					foreach($movies as $r){
-						echo '<a href="/movies/'. $r['url'] .'" class="movie_poster" data-title="'. $r['title'] .'"><img src="/imgs/movie_posters/'.$r['url'].'.jpg"></a>';
+						$classes = '';
+						
+						if(time() < $r['theater'] && !$upcoming){
+							$upcoming = true;
+							$classes .= ' next_upcoming';
+						}
+						
+						echo '<a href="/movies/'. $r['url'] .'" class="movie_poster'. $classes .'" data-title="'. $r['title'] .'"><img src="/imgs/movie_posters/'.$r['url'].'.jpg"></a>';
 					}
 				?>
 				</div>

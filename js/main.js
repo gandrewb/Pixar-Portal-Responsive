@@ -12,9 +12,17 @@ menu_btn.addEventListener('click', function(e){
 //Setting Width of Poster Container
 var poster_container = document.getElementById('poster_container'),
 	posters = poster_container.querySelectorAll('.movie_poster'),
-	poster_margin = 22;
+	poster_margin = 22,
+	poster_width = 100;
 	
-poster_container.style.width = (posters.length * (100 + poster_margin)) + 'px';
+poster_container.style.width = (posters.length * (poster_width + poster_margin)) + 'px';
+
+//Scroll Poster container to most relevant upcoming film
+var upcoming = poster_container.querySelector('.movie_poster.next_upcoming');
+var scroller = poster_container.parentNode;
+var scroll_dist = upcoming.getBoundingClientRect().left - scroller.getBoundingClientRect().left;
+scroller.scrollLeft = scroll_dist - poster_width - (poster_margin * 2.5);
+console.log(scroll_dist);
 
 
 //Wrapping videos with <div class="video"> for scaling
@@ -37,7 +45,7 @@ for(var i=0, l=videos.length; i<l; i++){
 }
 
 
-//Setting Coutdown Timers
+//Setting Countdown Timers
 var timers = document.querySelectorAll('.timer');
 var t_list = [];
 

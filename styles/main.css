@@ -190,7 +190,7 @@ header{
 	}
 	.blog_article img{
 		max-width: 100%;
-		margin: 0 1em 1em 0;
+		margin: 0 0 1em 0;
 	}
 	.blog_article img.left{
 		float: left;
